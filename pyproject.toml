@@ -1,0 +1,29 @@
+[project]
+name = "happy-paws"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sirichok jaimano", email = "sirichok2315@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.142.2",
+    "fastmcp>=4.0.11",
+    "mariadb>=1.1.14",
+    "nicegui>=3.17.1",
+    "python-dotenv>=1.2.4",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+happy-paws = "happy_paws:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "my-mcp-server",
+]
